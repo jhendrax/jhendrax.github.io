@@ -52,6 +52,19 @@ div{
 </head>
 <body>
 <center>
+	<div id="login">
+<b>Username: </b> <input type="text" name="Username" value=""><br>
+<b>Password: </b> <input type="password" name="Password" value=""><br>
+
+<form action="doc.html">
+    <input type="submit" value="doc login" />
+</form>
+
+<form action="patient.html">
+    <input type="submit" value="patient login" />
+</form>
+	</div>
+	
 	
 	</center>
 	
@@ -62,7 +75,7 @@ div{
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="container">
+	<center><div class="container">
 	<input id="txtEmail" type="email" placeholder="Email">
 	<input id="txtPassword" type="password" placeholder="Password">
 	<button id="btnLogin" class="btn btn-action">Login</button>
@@ -70,6 +83,7 @@ div{
 	<button id="btnLogout" class="btn btn-action hide">Logout</button>
 	</div>
 	<script src="app.js"></script>
+		</center>
 </body>
 </html>
 
