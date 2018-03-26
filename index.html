@@ -29,8 +29,10 @@ div{
 	}
 	
 	body{
-	background-image:url("https://vignette.wikia.nocookie.net/zombie/images/1/18/Hospital.jpg/revision/latest?cb=20160329114824") ;
-	}
+	background-image:url("https://www.lvhn.org/facilities_directions/hospital_locations/campuses/lehigh_valley_hospital%E2%80%93pocono"); 
+	background-position: right bottom, left top;
+        background-repeat: no-repeat, repeat;
+        background-size: cover;
 	
 	b{
 	color:white;
@@ -63,9 +65,6 @@ div{
 <form action="patient.html">
     <input type="submit" value="patient login" />
 </form>
-<form action="signup.html">
-	<button id="btnSignup" class="btn btn-secondary">Sign Up</button>
-</form>
 	</div>
 	
 	
@@ -78,7 +77,15 @@ div{
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+	<center><div class="container">
+	<input id="txtEmail" type="email" placeholder="Email">
+	<input id="txtPassword" type="password" placeholder="Password">
+	<button id="btnLogin" class="btn btn-action">Login</button>
+	<button id="btnSignup" class="btn btn-secondary">Sign Up</button>
+	<button id="btnLogout" class="btn btn-action hide">Logout</button>
+	</div>
+	<script src="app.js"></script>
+		</center>
 </body>
 </html>
 
