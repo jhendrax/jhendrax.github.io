@@ -15,7 +15,7 @@
   };
   firebase.initializeApp(config);
 function register(){
-			var email = document.getElementById("e");
+			var email = document.getElementById("e").value;
 			var password = document.getElementById("p").value;
 			firebase.auth().createUserWithEmailAndPassword(email,password).then(function(user){
 				alert(user.uid);
