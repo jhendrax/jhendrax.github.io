@@ -20,7 +20,7 @@ function register(){
 			firebase.auth().createUserWithEmailAndPassword(email,password).then(function(user){
 				alert(user.uid);
 				var db = firebase.database().ref("user/" + user.uid);
-				db.set({email:user.email, password:user.password
+				db.set({email:user.email
 				});	
 				});
 			}
@@ -44,7 +44,7 @@ function signin(){
 		</head>
 <body>
 	<center><div class="container">
-	<input id="e" type="email" placeholder="Email">
+	<input id="e" type="text" placeholder="Email">
 	<input id="p" type="password" placeholder="Password">
 	<button onclick="register()">Register</button>
 	<button onclick="signin()">Sign In</button>
