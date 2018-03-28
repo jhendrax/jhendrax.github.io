@@ -22,7 +22,7 @@ function register(){
 			firebase.auth().createUserWithEmailAndPassword(email,password).then(function(user){
 				alert(user.email);
 				var db = firebase.database().ref("user/" + user.uid);
-				db.set({email:user.email, firstn:user.firstn, lastn:user.lastn
+				db.set({email:user.email, firstn:firstn, lastn:lastn
 				});	
 				});
 			}
