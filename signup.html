@@ -17,12 +17,12 @@
 function register(){
 			var email = document.getElementById("e").value;
 			var password = document.getElementById("p").value;
-			var first = document.getElementById("f").value;
-			var last = document.getElementById("l").value;
+			var firstn = document.getElementById("f").value;
+			var lastn = document.getElementById("l").value;
 			firebase.auth().createUserWithEmailAndPassword(email,password).then(function(user){
 				alert(user.email);
 				var db = firebase.database().ref("user/" + user.uid);
-				db.set({email:user.email, first:user.first, last:user.last
+				db.set({email:user.email, first:user.firstn, last:user.lastn
 				});	
 				});
 			}
