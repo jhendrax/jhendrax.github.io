@@ -20,7 +20,7 @@ function register(){
 			var firstn = document.getElementById("f").value;
 			var lastn = document.getElementById("l").value;
 			firebase.auth().createUserWithEmailAndPassword(email,password).then(function(user){
-				alert(user.email);
+				alert(lastn);
 				var db = firebase.database().ref("user/" + user.uid);
 				db.set({email:user.email, firstn:firstn, lastn:lastn
 				});	
