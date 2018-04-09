@@ -37,6 +37,7 @@ function signin(){
 					alert(error);
 				
 			});
+			document.getElementById("in").onclick
 		}
 </script>
 	<style>
@@ -52,7 +53,13 @@ function signin(){
 	<input id="e" type="text" placeholder="Email"><br><br>
 	<input id="p" type="password" placeholder="Password"><br><br>
 	<button onclick="register()">Register</button>
-	<button onclick="signin()">Sign In</button>
+	<button id="in" onclick="signin()">Sign In</button>
+	<div class="dropdown">
+  	<div class="dropdown-content">
+    	<p>Patient</p>
+	<p>Doctor</p>
+  	</div>
+	</div>
 	</div>
 	
 		</center>
