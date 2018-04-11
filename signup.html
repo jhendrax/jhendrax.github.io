@@ -37,7 +37,9 @@ function signin(){
 					alert(error);
 				
 			});
-			document.getElementById("in").onclick = "patient.html";
+			document.getElementById("in").onclick = function () {
+        			location.href = "patient.html";
+    			};
 		}
 </script>
 	<style>
