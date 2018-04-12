@@ -49,7 +49,13 @@ function signin(){
 	
 </script>
 	<style>
-		#sign{
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+	}
+#sign{
 	padding:30px;
 	width:10%;
    	margin-top:100px;
@@ -62,7 +68,7 @@ function signin(){
 	/*box-shadow:5px 5px 5px;*/
 	center
 	}
-		body{
+body{
 	background-image:url("http://www.bucklarchitects.com/wp-content/uploads/2015/12/1-MMC-Gagnon-Lobby-1080-1.png"); 
 	background-position: left top;
        	background-repeat: no-repeat;
@@ -78,8 +84,11 @@ function signin(){
 	</style>	
 		</head>
 <body>
-	<div id="sign">
-	<center><div class="container">
+	<div class="center" id="sign">
+		
+	<center>
+		
+		<div class="container">
 	<h1 href="index.html">Sign Up</h1><br><br>
 	<input id="f" type="text" placeholder="First"><br><br>
 	<input id="l" type="text" placeholder="Last"><br><br>
@@ -89,20 +98,21 @@ function signin(){
 	<button onclick="register()">Register</button>
 	<button id="in" onclick="signin()">Sign In</button>
 	
-	</div>
+		</div>
 
 <form action="#" method="post" class="demoForm" id="demoForm">
    
-<p>Select a login method:</p>
-    <p>
-        <label><input type="radio" id="pat" name="ship" value="Patient" /> Patient </label>
-        <label><input type="radio" id="doc" name="ship" value="Doctor" /> Doctor </label>
+	<p>Select a login method:</p>
+   		 <p>
+        		<label><input type="radio" id="pat" name="ship" value="Patient" /> Patient </label>
+        		<label><input type="radio" id="doc" name="ship" value="Doctor" /> Doctor </label>
       
-    </p>
+   		 </p>
 </form>
 	
 
-		</center>
-	</div>
-</body>
+	</center>
+</div>
+	
+	</body>
 </html>
