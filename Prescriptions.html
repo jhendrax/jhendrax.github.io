@@ -41,11 +41,28 @@ li a:hover {
 	</ul>
 	
 	<h1>Prescriptions </h1>
-	<h2>
+	<h2 id="bigOne" >
 	Greg Smith<br>
 	Penicillin-VK 250mg<br>
 	20 tablets<br>
 	Take every 6 to 8 hours for a week.
 	</h2>
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBruurv91eJRAhxoGZ_yhY5SaMJJHTebn0",
+    authDomain: "web-quickstart-20395.firebaseapp.com",
+    databaseURL: "https://web-quickstart-20395.firebaseio.com",
+    projectId: "web-quickstart-20395",
+    storageBucket: "",
+    messagingSenderId: "578241609146"
+  };
+  firebase.initializeApp(config);
+  
+  var bigOne = document.getElementById('');
+  var dbRef = firebase.database().ref().child('text');
+  dbRef.on('value', snap => bigOne.innerText = snap.val()); 
+</script>
 </body>
 </html>
