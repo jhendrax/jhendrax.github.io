@@ -73,12 +73,12 @@ function login(){
 	
    var loginbutton = document.getElementById('clickedLogin');
 	
-    document.getElementById('bg').style.display = 'none';
+    document.getElementById('bg').style.display = 'block';
 
    loginbutton.onclick = function() {
 	   
-	 if (document.getElementById('bg').style.display !== 'none'){
-            document.getElementById('bg').style.display  = 'none';
+	 if (document.getElementById('bg').style.display !== 'block'){
+            document.getElementById('bg').style.display  = 'block';
 		 console.log("testing1");
         }else {
             document.getElementById('bg').style.display  = 'block';
