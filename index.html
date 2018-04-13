@@ -70,6 +70,23 @@
 </style>
 <script>
 function login(){
+	
+	//Get login elements
+	var userName = document.getElementById("Username").value;
+	var password = document.getElementById("Password").value;
+
+	//sign in
+	firebase.auth().signInWithEmailAndPassword(userName,password).then(function(user){
+				if(user){
+					//checking to see udid
+					console.log(user.uid);
+				}
+				}).catch(function(error){
+					alert(error);
+				
+			});
+	
+	/*
 	var user = document.getElementById("Username").value;
 	if(user == "doc"){
 		document.getElementById("click").onclick = function () {
@@ -80,7 +97,7 @@ function login(){
 		document.getElementById("click").onclick = function () {
         		location.href = "patient.html";
     		};
-	}
+	}*/
 
 }
 </script>
