@@ -93,11 +93,16 @@ function login(){
 			
    		console.log(currentStatus);
 			
+			//checking if this dood is a doctor
 		    if(currentStatus == "doc"){
 			    
-			    console.log("move to doc page");
-		    }
-		    
+			    //if mans is a doctor, bring him to the doc page
+			    location.href = "doc.html";
+			 
+			    
+		    } else
+		    	    //if mans is a patient bring him to the patient page
+			    location.href = "patient.html";
 			
 		});
 					
