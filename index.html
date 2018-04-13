@@ -82,17 +82,13 @@ function login(){
 	//sign in
 	firebase.auth().signInWithEmailAndPassword(userName,password).then(function(user){
 		if(user){
-		//checking to see udid
-		console.log(user.uid);
-		
+			
 		//access status from your database
 		var statusRef = firebase.database().ref("user/" + user.uid + "/status");
 		statusRef.on("value", function(snapshot) {
 			
 		var currentStatus = snapshot.val();
-			
-   		console.log(currentStatus);
-			
+						
 			//checking if this dood is a doctor
 		    if(currentStatus == "doc"){
 			    
