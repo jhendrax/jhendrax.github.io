@@ -71,8 +71,10 @@
 <script>
 function login(){
 	
-   $('#clickedLogin').unbind('click').click(function() {
+   var loginbutton = document.getElementById('clickedLogin');
 	
+   loginbutton.onclick = function() {
+  	
 	//Get login elements
 	var userName = document.getElementById("Username").value;
 	var password = document.getElementById("Password").value;
@@ -105,7 +107,7 @@ function login(){
 				
 		});
 			
-	});
+	}
 	
 	/*
 	var user = document.getElementById("Username").value;
