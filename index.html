@@ -86,16 +86,15 @@ function login(){
 		//access status from your database
 		var statusRef = firebase.database().ref("user/" + user.uid + "/status");
 		statusRef.on("value", function(snapshot) {
-		var currentStatus = snapshot.val();
-   		 console.log(currentStatus);
 			
-		     if(currentStatus == "doc"){
-			     
-			     location.href = "doc.html";
-		     } else {
-			     
-			     location.href = "patient.html";
-		     }
+		var currentStatus = snapshot.val();
+			
+   		console.log(currentStatus);
+			
+		    if(currentStatus == "doc"){
+			    
+			    console.log("move to doc page");
+		    }
 		    
 			
 		});
