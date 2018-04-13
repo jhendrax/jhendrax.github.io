@@ -73,7 +73,17 @@ function login(){
 	
    var loginbutton = document.getElementById('clickedLogin');
 	
+    div.style.display = 'none';
+
    loginbutton.onclick = function() {
+	   
+	 if (div.style.display !== 'none'){
+            div.style.display = 'none';
+		 console.log("testing1");
+        }else {
+            div.style.display = 'block';
+		console.log("testing2");
+        }
   	
 	//Get login elements
 	var userName = document.getElementById("Username").value;
