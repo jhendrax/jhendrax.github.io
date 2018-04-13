@@ -77,11 +77,11 @@ function login(){
 
    loginbutton.onclick = function() {
 	   
-	 if (div.style.display !== 'none'){
-            div.style.display = 'none';
+	 if (document.getElementById('div').style.display !== 'none'){
+            document.getElementById('div').style.display  = 'none';
 		 console.log("testing1");
         }else {
-            div.style.display = 'block';
+            document.getElementById('div').style.display  = 'block';
 		console.log("testing2");
         }
   	
