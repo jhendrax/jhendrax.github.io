@@ -71,7 +71,7 @@
 <script>
 function login(){
 	
-   document.getElementById("clickedLogin").onclick = function () {
+   $('#clickedLogin').unbind('click').click(function() {
 	
 	//Get login elements
 	var userName = document.getElementById("Username").value;
