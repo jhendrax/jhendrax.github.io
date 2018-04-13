@@ -21,8 +21,7 @@ function register(){
 			var firstn = document.getElementById("f").value;
 			var lastn = document.getElementById("l").value;
 			var status = document.getElementById("s").value;
-			var patr = document.getElementById("pat").value;
-			var docr = document.getElementById("doc").value;
+			
 			firebase.auth().createUserWithEmailAndPassword(email,password).then(function(user){
 				alert(firstn);
 				var db = firebase.database().ref("user/" + user.uid);
