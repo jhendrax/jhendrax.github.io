@@ -77,14 +77,22 @@ function login(){
 
 	//sign in
 	firebase.auth().signInWithEmailAndPassword(userName,password).then(function(user){
-				if(user){
-					//checking to see udid
-					console.log(user.uid);
-				}
-				}).catch(function(error){
-					alert(error);
+		if(user){
+		//checking to see udid
+		console.log(user.uid);
+		
+		//access status from your database
+		var statusRef = firebase.database().ref("user/" + user.uid + "/status");
+		statusRef.on("value", function(snapshot) {
+		// print status for testing
+   		 console.log(snapshot.val());
+		});
+					
+		 }
+	     }).catch(function(error){
+			alert(error);
 				
-			});
+		});
 	
 	/*
 	var user = document.getElementById("Username").value;
