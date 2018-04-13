@@ -42,7 +42,7 @@ function signin(){
 					alert(error);
 				
 			});
-			if(status.contains("patient")){
+			if(document.getElementById("s").value.contains("patient")){
 			document.getElementById("in").onclick = function () {
         			location.href = "patient.html";
     			};
