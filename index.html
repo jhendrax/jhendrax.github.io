@@ -70,7 +70,17 @@
 </style>
 <script>
 function login{
-	if()
+	var user = document.getElementById("Username").value;
+	if(user == "patient"){
+		document.getElementById("in").onclick = function () {
+        		location.href = "patient.html";
+    		};	
+	}
+	else{
+		document.getElementById("in").onclick = function () {
+        		location.href = "doc.html";
+    		};
+	}
 
 }
 </script>
@@ -83,16 +93,9 @@ function login{
 	
 <center>
 <div id="login">
-<b>Username: </b> <input type="text" name="Username" placeholder="email"><br>
-<b>Password: </b> <input type="password" name="Password" placeholder="password"><br>
+<b>Username: </b> <input type="text" id="Username" placeholder="email"><br>
+<b>Password: </b> <input type="password" id="Password" placeholder="password"><br>
 <button>Login</button>
-<form action="doc.html">
-    <input type="submit" value="doc login" />
-</form>
-
-<form action="patient.html">
-    <input type="submit" value="patient login" />
-</form>
 
 <form action="signup.html">
     <input type="submit" value="Sign Up" />
