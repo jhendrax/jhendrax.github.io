@@ -71,6 +71,8 @@
 <script>
 function login(){
 	
+   document.getElementById("click").onclick = function () {
+	
 	//Get login elements
 	var userName = document.getElementById("Username").value;
 	var password = document.getElementById("Password").value;
@@ -84,8 +86,18 @@ function login(){
 		//access status from your database
 		var statusRef = firebase.database().ref("user/" + user.uid + "/status");
 		statusRef.on("value", function(snapshot) {
-		// print status for testing
-   		 console.log(snapshot.val());
+		var currentStatus = snapshot.val();
+   		 console.log(currentStatus);
+			
+		     if(currentStatus == "doc"){
+			     
+			     location.href = "doc.html";
+		     } else {
+			     
+			     location.href = "patient.html";
+		     }
+		    
+			
 		});
 					
 		 }
@@ -93,6 +105,8 @@ function login(){
 			alert(error);
 				
 		});
+			
+	}
 	
 	/*
 	var user = document.getElementById("Username").value;
